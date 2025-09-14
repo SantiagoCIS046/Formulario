@@ -16,90 +16,83 @@
       <section class="intro">
         <h2>¿Qué son los formularios HTML?</h2>
         <p>
-          Los formularios HTML son una parte esencial de las páginas web que
-          permiten a los usuarios introducir datos y enviarlos a un servidor
-          para su procesamiento. Piensa en ellos como los
-          <span class="highlight">puentes de comunicación</span> entre los
-          usuarios y los sitios web.
+          HTML forms are an essential part of web pages that allow users to
+          enter data and submit it to a server for processing. Think of them as
+          the
+          <span class="highlight">communication bridges</span> between users and
+          websites.
         </p>
         <p>
-          Desde buscar en Google hasta iniciar sesión en redes sociales o
-          comprar en línea, todos utilizamos formularios constantemente al
-          navegar por internet.
+          From searching on Google to logging into social media or shopping
+          online, we all use forms constantly when browsing the internet.
         </p>
       </section>
 
       <section class="cards">
         <div class="card">
-          <h3>Elementos básicos de un formulario</h3>
+          <h3>Basic elements of a form</h3>
           <ul>
-            <li><strong>&lt;form&gt;</strong>: El contenedor principal</li>
-            <li>
-              <strong>&lt;input&gt;</strong>: Para textos, contraseñas, etc.
-            </li>
-            <li><strong>&lt;textarea&gt;</strong>: Para textos largos</li>
-            <li><strong>&lt;select&gt;</strong>: Listas desplegables</li>
-            <li><strong>&lt;button&gt;</strong>: Botones de envío o acción</li>
+            <li><strong>&lt;form&gt;</strong>: The main container</li>
+            <li><strong>&lt;input&gt;</strong>: For texts, passwords, etc.</li>
+            <li><strong>&lt;textarea&gt;</strong>: For long texts</li>
+            <li><strong>&lt;select&gt;</strong>: Drop-down lists</li>
+            <li><strong>&lt;button&gt;</strong>: Submit or action buttons</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Atributos importantes</h3>
+          <h3>Important attributes</h3>
           <ul>
-            <li><strong>action</strong>: ¿A dónde se envían los datos?</li>
-            <li><strong>method</strong>: Cómo se envían (GET o POST)</li>
-            <li><strong>name</strong>: Identifica cada campo</li>
-            <li>
-              <strong>type</strong>: Tipo de campo (text, email, password)
-            </li>
-            <li><strong>placeholder</strong>: Texto de ejemplo en un campo</li>
+            <li><strong>action</strong>: Where is the data sent?</li>
+            <li><strong>method</strong>: How they are sent (GET or POST)</li>
+            <li><strong>name</strong>: Identifies each field</li>
+            <li><strong>type</strong>: Field type (text, email, password)</li>
+            <li><strong>placeholder</strong>: Example text in a field</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Tipos de input comunes</h3>
+          <h3>Common Input Types</h3>
           <ul>
-            <li>text - Texto simple</li>
-            <li>password - Contraseñas</li>
-            <li>email - Dirección de correo</li>
-            <li>number - Números</li>
-            <li>checkbox - Casillas de verificación</li>
-            <li>radio - Botones de opción</li>
+            <li>text - Plain text</li>
+            <li>password - Passwords</li>
+            <li>email - Email address</li>
+            <li>number - Numbers</li>
+            <li>checkbox - Checkboxes</li>
+            <li>radio - Radio buttons</li>
           </ul>
         </div>
       </section>
 
       <section class="code-example">
-        <h3>Ejemplo de código HTML</h3>
-        <pre><code>&lt;form action="/procesar.php" method="post"&gt;
-  &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
-  &lt;input type="text" id="nombre" name="nombre" required&gt;
-  
-  &lt;label for="email"&gt;Email:&lt;/label&gt;
-  &lt;input type="email" id="email" name="email" required&gt;
-  
-  &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
-  &lt;textarea id="mensaje" name="mensaje"&gt;&lt;/textarea&gt;
-  
-  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+        <h3>HTML code example</h3>
+        <pre><code>&lt;form action="/process.php" method="post"&gt; 
+&lt;label for="name"&gt;Name:&lt;/label&gt; 
+&lt;input type="text" id="name" name="name" required&gt; 
+
+&lt;label for="email"&gt;Email:&lt;/label&gt; 
+&lt;input type="email" id="email" name="email" required&gt; 
+
+&lt;label for="message"&gt;Message:&lt;/label&gt; 
+&lt;textarea id="message" name="message"&gt;&lt;/textarea&gt; 
+
+&lt;button type="submit"&gt;Send&lt;/button&gt;
 &lt;/form&gt;</code></pre>
       </section>
 
       <section class="activity">
-        <h2>Actividad práctica: Completa el formulario</h2>
-        <p>
-          A continuación, encontrarás un formulario incompleto. Tu misión es:
-        </p>
+        <h2>Practical Activity: Complete the Form</h2>
+        <p>Below, you will find an incomplete form. Your mission is:</p>
         <ol>
-          <li>Completar los campos faltantes (marcados con ❌)</li>
-          <li>Seleccionar tu navegador web favorito</li>
-          <li>Enviar el formulario para ver los resultados</li>
+          <li>Complete the missing fields (marked with ❌)</li>
+          <li>Select your preferred web browser</li>
+          <li>Submit the form to see the results</li>
         </ol>
 
         <div class="form-container">
           <form id="myForm">
             <div>
-              <label for="nombre">Nombre completo:</label>
+              <label for="name">Full name:</label>
               <input
                 type="text"
                 id="nombre"
@@ -110,7 +103,7 @@
             </div>
 
             <div>
-              <label for="email">Correo electrónico:</label>
+              <label for="email">Email:</label>
               <input
                 type="email"
                 id="email"
@@ -121,7 +114,7 @@
             </div>
 
             <div>
-              <label for="edad">Edad:</label>
+              <label for="edad">Age:</label>
               <input
                 type="number"
                 id="edad"
@@ -133,31 +126,31 @@
             </div>
 
             <div>
-              <label for="navegador">Navegador favorito:</label>
-              <select id="navegador" name="navegador" required>
-                <option value="">-- Selecciona uno --</option>
+              <label for="browser">Favorite browser:</label>
+              <select id="browser" name="browser" required>
+                <option value="">-- Select one --</option>
                 <option value="chrome">Google Chrome</option>
                 <option value="firefox">Mozilla Firefox</option>
                 <option value="safari">Safari</option>
                 <option value="edge">Microsoft Edge</option>
-                <option value="otros">Otros</option>
+                <option value="others">Others</option>
               </select>
             </div>
 
             <div>
-              <span>¿Te gusta aprender sobre formularios?</span><br />
+              <span>Do you like learning about forms?</span><br />
               <input type="radio" id="si" name="gusta" value="si" required />
-              <label for="si" class="inline-label">Sí</label>
+              <label for="si" class="inline-label">Yes</label>
 
               <input type="radio" id="no" name="gusta" value="no" />
               <label for="no" class="inline-label">No</label>
 
               <input type="radio" id="talvez" name="gusta" value="talvez" />
-              <label for="talvez" class="inline-label">Tal vez</label>
+              <label for="talvez" class="inline-label">Maybe</label>
             </div>
 
             <div>
-              <label for="comentarios">Comentarios adicionales:</label>
+              <label for="comentarios">Additional comments:</label>
               <textarea
                 id="comentarios"
                 name="comentarios"
@@ -166,28 +159,25 @@
               ></textarea>
             </div>
 
-            <button type="submit">Enviar</button>
+            <button type="submit">Submit</button>
           </form>
           <div id="result" class="result-message">
-            <h3>¡Formulario completado con éxito!</h3>
-            <p>Gracias por completar el formulario. Has practicado con:</p>
+            <h3>Form completed successfully!</h3>
+            <p>Thank you for completing the form. You've practiced with:</p>
             <ul>
-              <li>Campos de texto</li>
-              <li>Campo de email</li>
-              <li>Campo numérico</li>
-              <li>Listas desplegables</li>
-              <li>Botones de radio</li>
-              <li>Área de texto</li>
+              <li>Text fields</li>
+              <li>Email field</li>
+              <li>Numeric field</li>
+              <li>Drop-down lists</li>
+              <li>Radio buttons</li>
+              <li>Text area</li>
             </ul>
           </div>
         </div>
       </section>
 
       <footer>
-        <p>
-          Miniestación sobre Formularios HTML - Diseñado para aprendizaje
-          interactivo
-        </p>
+        <p>HTML Forms Mini-Workshop - Designed for interactive learning</p>
       </footer>
     </div>
     <script src="java.js"></script>
