@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miniestación: Formularios HTML</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #f5f7fa;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      header {
+        text-align: center;
+        padding: 30px 0;
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        color: #6a11cb;
+        margin: 20px 0 15px;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 8px;
+      }
+
+      .intro {
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+      }
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      .card {
+        flex: 1 1 300px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .card h3 {
+        color: #2575fc;
+        margin-bottom: 15px;
+      }
+
+      .card ul {
+        padding-left: 20px;
+      }
+
+      .card li {
+        margin-bottom: 8px;
+      }
+
+      .activity {
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+      }
+
+      .code-example {
+        background-color: #2d2d2d;
+        color: #f8f8f2;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+        overflow-x: auto;
+        font-family: "Courier New", monospace;
+      }
+
+      .form-container {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+
+      form {
+        display: grid;
+        gap: 15px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      button {
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        margin-top: 30px;
+        color: #777;
+      }
+
+      .highlight {
+        background-color: #fff8e1;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-weight: bold;
+      }
+
+      @media (max-width: 768px) {
+        .cards {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Formularios HTML</h1>
+        <p>La forma de interactuar con tus usuarios en la web</p>
+      </header>
+
+      <section class="intro">
+        <h2>¿Qué son los formularios HTML?</h2>
+        <p>
+          Los formularios HTML son una parte esencial de las páginas web que
+          permiten a los usuarios introducir datos y enviarlos a un servidor
+          para su procesamiento. Piensa en ellos como los
+          <span class="highlight">puentes de comunicación</span> entre los
+          usuarios y los sitios web.
+        </p>
+        <p>
+          Desde buscar en Google hasta iniciar sesión en redes sociales o
+          comprar en línea, todos utilizamos formularios constantemente al
+          navegar por internet.
+        </p>
+      </section>
+
+      <section class="cards">
+        <div class="card">
+          <h3>Elementos básicos de un formulario</h3>
+          <ul>
+            <li><strong>&lt;form&gt;</strong>: El contenedor principal</li>
+            <li>
+              <strong>&lt;input&gt;</strong>: Para textos, contraseñas, etc.
+            </li>
+            <li><strong>&lt;textarea&gt;</strong>: Para textos largos</li>
+            <li><strong>&lt;select&gt;</strong>: Listas desplegables</li>
+            <li><strong>&lt;button&gt;</strong>: Botones de envío o acción</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Atributos importantes</h3>
+          <ul>
+            <li><strong>action</strong>: ¿A dónde se envían los datos?</li>
+            <li><strong>method</strong>: Cómo se envían (GET o POST)</li>
+            <li><strong>name</strong>: Identifica cada campo</li>
+            <li>
+              <strong>type</strong>: Tipo de campo (text, email, password)
+            </li>
+            <li><strong>placeholder</strong>: Texto de ejemplo en un campo</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Tipos de input comunes</h3>
+          <ul>
+            <li>text - Texto simple</li>
+            <li>password - Contraseñas</li>
+            <li>email - Dirección de correo</li>
+            <li>number - Números</li>
+            <li>checkbox - Casillas de verificación</li>
+            <li>radio - Botones de opción</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="code-example">
+        <h3>Ejemplo de código HTML</h3>
+        <pre><code>&lt;form action="/procesar.php" method="post"&gt;
+  &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+  &lt;input type="text" id="nombre" name="nombre" required&gt;
+  
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required&gt;
+  
+  &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
+  &lt;textarea id="mensaje" name="mensaje"&gt;&lt;/textarea&gt;
+  
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+      </section>
+
+      <section class="activity">
+        <h2>Actividad práctica: Completa el formulario</h2>
+        <p>
+          A continuación, encontrarás un formulario incompleto. Tu misión es:
+        </p>
+        <ol>
+          <li>Completar los campos faltantes (marcados con ❌)</li>
+          <li>Seleccionar tu navegador web favorito</li>
+          <li>Enviar el formulario para ver los resultados</li>
+        </ol>
+
+        <div class="form-container">
+          <form id="myForm">
+            <div>
+              <label for="nombre">Nombre completo:</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                placeholder="Ej: María García"
+              />
+            </div>
+
+            <div>
+              <label for="email">Correo electrónico:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Ej: usuario@ejemplo.com"
+              />
+            </div>
+
+            <div>
+              <label for="edad">Edad:</label>
+              <input
+                type="number"
+                id="edad"
+                name="edad"
+                min="1"
+                max="120"
+                placeholder="Introduce tu edad"
+              />
+            </div>
+
+            <div>
+              <label for="navegador">Navegador favorito:</label>
+              <select id="navegador" name="navegador" required>
+                <option value="">-- Selecciona uno --</option>
+                <option value="chrome">Google Chrome</option>
+                <option value="firefox">Mozilla Firefox</option>
+                <option value="safari">Safari</option>
+                <option value="edge">Microsoft Edge</option>
+                <option value="otros">Otros</option>
+              </select>
+            </div>
+
+            <div>
+              <label>¿Te gustan los formularios HTML?</label>
+              <div>
+                <input type="radio" id="si" name="gusta" value="si" />
+                <label for="si" style="display: inline; font-weight: normal"
+                  >Sí</label
+                >
+
+                <input type="radio" id="no" name="gusta" value="no" />
+                <label for="no" style="display: inline; font-weight: normal"
+                  >No</label
+                >
+
+                <input type="radio" id="talvez" name="gusta" value="talvez" />
+                <label for="talvez" style="display: inline; font-weight: normal"
+                  >Tal vez</label
+                >
+              </div>
+            </div>
+
+            <div>
+              <label for="comentarios">Comentarios adicionales:</label>
+              <textarea
+                id="comentarios"
+                name="comentarios"
+                rows="4"
+                placeholder="Escribe aquí tus comentarios..."
+              ></textarea>
+            </div>
+
+            <button type="submit">Enviar información</button>
+          </form>
+        </div>
+
+        <div
+          id="result"
+          style="
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-radius: 8px;
+          "
+        >
+          <h3>¡Formulario completado con éxito!</h3>
+          <p>Gracias por completar el formulario. Has practicado con:</p>
+          <ul>
+            <li>Campos de texto</li>
+            <li>Campo de email</li>
+            <li>Campo numérico</li>
+            <li>Listas desplegables</li>
+            <li>Botones de radio</li>
+            <li>Área de texto</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          Miniestación sobre Formularios HTML - Diseñado para aprendizaje
+          interactivo
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          document.getElementById("result").style.display = "block";
+
+          // Desplazarse suavemente hacia el resultado
+          document
+            .getElementById("result")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+  </body>
+</html>
