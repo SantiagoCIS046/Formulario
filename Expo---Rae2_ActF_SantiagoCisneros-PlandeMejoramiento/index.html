@@ -162,6 +162,20 @@
           flex-direction: column;
         }
       }
+
+      .inline-label {
+        display: inline;
+      }
+      .normal-weight {
+        font-weight: normal;
+      }
+      .result-message {
+        display: none;
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #e8f5e9;
+        border-radius: 8px;
+      }
     </style>
   </head>
   <body>
@@ -303,23 +317,15 @@
             </div>
 
             <div>
-              <label>¿Te gustan los formularios HTML?</label>
-              <div>
-                <input type="radio" id="si" name="gusta" value="si" />
-                <label for="si" style="display: inline; font-weight: normal"
-                  >Sí</label
-                >
+              <span>¿Te gusta aprender sobre formularios?</span><br />
+              <input type="radio" id="si" name="gusta" value="si" required />
+              <label for="si" class="inline-label">Sí</label>
 
-                <input type="radio" id="no" name="gusta" value="no" />
-                <label for="no" style="display: inline; font-weight: normal"
-                  >No</label
-                >
+              <input type="radio" id="no" name="gusta" value="no" />
+              <label for="no" class="inline-label">No</label>
 
-                <input type="radio" id="talvez" name="gusta" value="talvez" />
-                <label for="talvez" style="display: inline; font-weight: normal"
-                  >Tal vez</label
-                >
-              </div>
+              <input type="radio" id="talvez" name="gusta" value="talvez" />
+              <label for="talvez" class="inline-label">Tal vez</label>
             </div>
 
             <div>
@@ -332,30 +338,20 @@
               ></textarea>
             </div>
 
-            <button type="submit">Enviar información</button>
+            <button type="submit">Enviar</button>
           </form>
-        </div>
-
-        <div
-          id="result"
-          style="
-            display: none;
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #e8f5e9;
-            border-radius: 8px;
-          "
-        >
-          <h3>¡Formulario completado con éxito!</h3>
-          <p>Gracias por completar el formulario. Has practicado con:</p>
-          <ul>
-            <li>Campos de texto</li>
-            <li>Campo de email</li>
-            <li>Campo numérico</li>
-            <li>Listas desplegables</li>
-            <li>Botones de radio</li>
-            <li>Área de texto</li>
-          </ul>
+          <div id="result" class="result-message">
+            <h3>¡Formulario completado con éxito!</h3>
+            <p>Gracias por completar el formulario. Has practicado con:</p>
+            <ul>
+              <li>Campos de texto</li>
+              <li>Campo de email</li>
+              <li>Campo numérico</li>
+              <li>Listas desplegables</li>
+              <li>Botones de radio</li>
+              <li>Área de texto</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -373,6 +369,7 @@
         .addEventListener("submit", function (e) {
           e.preventDefault();
           document.getElementById("result").style.display = "block";
+          document.getElementById("result").classList.add("result-message");
 
           // Desplazarse suavemente hacia el resultado
           document
